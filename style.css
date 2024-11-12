@@ -24,9 +24,11 @@ body {
 /* Cabeçalho */
 header {
     text-align: center;
-    background: url('images/pixel-bg.png') center/cover;
+    background: url('images/pixel-bg.png') center/cover no-repeat;
     padding: 2em 0;
     color: var(--primary-blue);
+    background-size: cover; /* Adicionando mais controle no background */
+    background-position: center;
 }
 
 header h1 {
