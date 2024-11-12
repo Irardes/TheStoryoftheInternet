@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --primary-blue: #1E90FF;
+    --secondary-green: #32CD32;
+    --dark-bg: #111;
+    --text-color: #eee;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo */
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    background: url('images/pixel-bg.png') center/cover no-repeat;
+    padding: 2em 0;
+    color: var(--primary-blue);
+    background-size: cover; /* Adicionando mais controle no background */
+    background-position: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.3em;
+    text-shadow: 3px 3px 0 var(--secondary-green), -2px -2px 0 #000;
+}
+
+header p {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-blue);
+    padding: 1em;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-green);
+}
+
+/* Seções principais */
+section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 1em auto;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: var(--secondary-green);
+}
+
+section img, section video {
+    max-width: 70%;
+    margin: 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+section img:hover, section video:hover {
+    transform: scale(1.05);
+}
+
+/* Lista de capítulos */
+.chapter-list li {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: var(--primary-blue);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--primary-blue);
+    color: #fff;
+}
+
+/* Animações */
+.visible {
+    opacity: 1 !important;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#timeline-content, .chapter-list {
+    opacity: 0;
+    transform: translateY(50px);
+}
